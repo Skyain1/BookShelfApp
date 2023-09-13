@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BookShelf</string>
+    <string name="welcome_back">Welcome back,</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="you_already_have_an_account">You already have an account?</string>
+    <string name="register_to_continue">Register to continue</string>
+    <string name="get_started">Get started,</string>
+    <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
+    <string name="done">done</string>
+    <string name="_5_books">5 books</string>
+    <string name="_158_h">158 h</string>
+    <string name="of_reading">of reading</string>
+    <string name="_18_books">18 books</string>
+    <string name="you_have">you have</string>
+</resources>

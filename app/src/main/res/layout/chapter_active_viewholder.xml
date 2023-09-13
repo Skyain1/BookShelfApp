@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_54sdp">
+
+    <LinearLayout
+        android:id="@+id/btBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/active_table_chapter"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_10sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/galochka"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@android:color/transparent"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/icon_check" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lexend_medium"
+            android:text="Cover"
+            android:textColor="#8A8F8D"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/lexend_semibold"
+            android:text=" - Reading now"
+            android:textColor="@color/greytext_200"
+            app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/lexend_semibold"
+            android:maxLines="1"
+            android:text="1"
+            android:textColor="#8A8F8D" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

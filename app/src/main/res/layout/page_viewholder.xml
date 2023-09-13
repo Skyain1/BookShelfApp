@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingHorizontal="@dimen/_10sdp"
+      android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/lexend_light"
+          android:textSize="@dimen/_20ssp"
+          android:text="1." />
+
+      <TextView
+          android:id="@+id/body"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/_2sdp"
+          android:fontFamily="@font/lexend"
+          android:text="Тарас решил, что бывшие студенты должны возмужать во время набегов на врагов, и повёз их в Запорожскую Сечь. Разгульная жизнь Сечи пришлась сыновьям по душе. Младший сын даже стал забывать панночку, в которую влюбился во время учёбы. \n \n
+В те времена большей частью Украины управляла Польша. Вскоре пришло известие, что евреи и польские католические священники начали притеснять православную веру. Запорожские казаки встали на защиту своей веры и отправились в поход на Польшу. \n \n
+
+В осаждённом казаками городе находилась любимая младшего сына Тараса и сильно голодала. Узнав об этом, он пробрался к ней и решил остаться, предав тем самым Родину. За это Тарас во время боя собствен­норучно застрелил его. В том же бою поляки взяли в плен старшего сына Тараса и тяжело ранили его самого.\n \n
+Тарас решил: чтобы возмужать в битвах с врагами, сыновьям надо завтра же ехать в Запорожскую Сечь. Всю ночь бедная старушка-мать прорыдала у изголовья сыновей, чувствуя, что видит их в последний раз. Прощание с матерью расстроило братьев: еле сдерживая слёзы, они вспоминали своё детство и понимали, что оно закончилось.
+По дороге Тарас вспоминал старых друзей-сослуживцев и гадал, кто из них ещё жив. Остап с жалостью думал о матери, а Андрий вспоминал свою панночку. Увидев, что сыновья приуныли, Тарас велел им пришпорить лошадей, чтобы быстрая скачка по степи взбодрила их.Запорожская Сечь — главное укрепление запорожских казаков — находилась на острове посреди Днепра и почти не охранялась. Сечь окружали жилища торговцев."
+          android:textAlignment="textStart"
+          android:textSize="17sp" />
+
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".App.View.Activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/BtMore"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@android:color/transparent"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:src="@drawable/icon_more_vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btBookmarks"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@android:color/transparent"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:src="@drawable/icon_bookmark" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/roundedImageView"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ava_placeholder"
+                    android:scaleType="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:riv_oval="true" />
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:background="@drawable/main_table_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/lexend_semibold"
+                    android:text="Reading now"
+                    android:textColor="@color/greytext_200"
+                    app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/proc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/lexend_bold"
+                    android:text="5%"
+                    android:textColor="@color/DarkText"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/lexend_bold"
+                    android:text="-19 hours left"
+                    android:textColor="@color/DarkText"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/proc" />
+
+
+                <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                    android:id="@+id/pb"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginStart="20dp"
+                    app:rpbBackgroundColor="#E0DCD9"
+                    app:rpbCornerRadius="5dp"
+                    app:rpbProgress="20"
+                    app:rpbProgressColor="#254441"
+                    app:rpbShowProgressText="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/roundedImageView2"
+                    app:layout_constraintStart_toEndOf="@+id/roundedImageView2" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/roundedImageView2"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+
+                    android:elevation="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book_place_without_shadow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="8dp"
+                    app:riv_oval="false" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/icon_book" />
+
+                    <TextView
+                        android:id="@+id/booksCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/_18_books"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/you_have"
+                        android:textColor="@color/greytext_200" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/icon_clock" />
+
+                    <TextView
+                        android:id="@+id/allTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/_158_h"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/of_reading"
+                        android:textColor="@color/greytext_200" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/icon_completed" />
+
+                    <TextView
+                        android:id="@+id/BookSucess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/_5_books"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="@string/done"
+                        android:textColor="@color/greytext_200" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/lexend_bold"
+                android:text="Your Stats of week"
+                android:textColor="@color/DarkText"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbMo"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="50"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Mo"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbTu"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="100"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Tu"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbWe"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="70"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="We"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbTh"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="20"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Th"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbFr"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="50"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Fr"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbSa"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="100"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Sa"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/pbSu"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="40dp"
+                        android:rotation="270"
+                        app:rpbBackgroundColor="@android:color/transparent"
+                        app:rpbCornerRadius="3.5dp"
+                        app:rpbProgress="50"
+                        app:rpbProgressColor="#254441"
+                        app:rpbShowProgressText="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Su"
+                        android:textColor="@color/greytext_200"
+                        app:layout_constraintStart_toEndOf="@+id/roundedImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/BtBookShelf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/bookshelf_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Bookshelf"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_1sdp" />
+
+                <LinearLayout
+                    android:id="@+id/btBookmarksBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/bookmarks_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Bookmarks"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_1sdp" />
+
+                <LinearLayout
+                    android:id="@+id/toProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/profile_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/lexend_semibold"
+                        android:text="Profile"
+                        android:textColor="@color/DarkText"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

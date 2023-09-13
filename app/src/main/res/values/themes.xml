@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BookShelf" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/Purple</item>
+        <item name="colorPrimaryVariant">@color/DarkPurple</item>
+        <item name="colorOnSurface">@color/Background</item>
+        <item name="android:statusBarColor">?attr/colorOnSurface</item>
+        <item name="android:navigationBarColor">?attr/colorOnSurface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="MyHintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:fontFamily">@font/lexend_extrabold</item>
+    </style>
+
+    <style name="MyHintTextStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/lexend_bold</item>
+    </style>
+    
+
+    <style name="Widget"/>
+    
+    <style name="Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="minWidth">48dp</item>
+        <item name="maxWidth">48dp</item>
+        <item name="minHeight">48dp</item>
+        <item name="maxHeight">48dp</item>
+    </style>
+    
+    <style name="Widget.ProgressBar.Vertical">
+        <item name="android:indeterminate">false</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/vertical_progress_bar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="minWidth">1dp</item>
+        <item name="maxWidth">12dp</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/vertical_progress_bar</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="ProgressBar.Horizontal.Rounded" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+    </style>
+    <style name="Theme.BookShelf" parent="Base.Theme.BookShelf" />
+</resources>
