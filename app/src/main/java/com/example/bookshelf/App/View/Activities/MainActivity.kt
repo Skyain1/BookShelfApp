@@ -8,15 +8,10 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bookshelf.App.Model.Item.Library
 import com.example.bookshelf.App.Model.Item.WeekStat
-import com.example.bookshelf.App.Utilities.CharSequenceAdapter
-import com.example.bookshelf.App.Utilities.PreferenceManager
-import com.example.bookshelf.App.ViewModel.LoginViewModel
 import com.example.bookshelf.App.ViewModel.MainViewModel
 import com.example.bookshelf.R
 import com.example.bookshelf.databinding.ActivityMainBinding
-import com.google.gson.GsonBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

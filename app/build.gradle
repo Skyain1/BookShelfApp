@@ -89,12 +89,6 @@ dependencies {
     //Glide
     implementation "com.github.bumptech.glide:compose:1.0.0-alpha.1"
 
-    //Hilt
-   /* implementation "com.google.dagger:hilt-android:2.38.1"
-    kapt "com.google.dagger:hilt-compiler:2.38.1"
-    implementation "androidx.fragment:fragment-ktx:1.6.1"
-    kapt 'com.google.dagger:dagger-android-processor:2.38.1'
-    kapt 'com.google.dagger:dagger-compiler:2.38.1'*/
     implementation 'com.google.dagger:hilt-android:2.48'
     kapt 'com.google.dagger:hilt-compiler:2.48'
     implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
